@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="Nsignup.css">
+</head>
+
+<body class="Nsignup">
+  <header>
+    <div class="nav-logo">
+      <div class="nav-logo-icon">
+        <img src="/img/logo.svg" alt="icon">
+      </div>
+    </div>
+    <nav>
+      <ul class="nav-bar">
+        <li><a onclick="location.href='/Nindex/Nindex.html'">Preview</a></li>
+        <li><a onclick="location.href='/Nindex/Nindex.html'">FAQ &amp; Review</a></li>
+        <li><a onclick="location.href='/Nindex/Nindex.html'">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="nav-member">
+      <button class="login" onclick="location.href='/Nlogin/Nlogin.html'">Log in</button> 
+    </div>
+  </header>
+
+  <div class="signup-wrapper">
+    <div class="signup-image">
+      <img src="/img/signup-invigo-img.png" alt="Invigo image" />
+    </div>
+
+    <div class="signup-container">
+      <div class="signup-header">
+        <div class="signup-title">Sign up</div>
+        <div class="signup-sub-title">
+          <p>If you have an account register</p>
+          <p>You can
+            <a class="text-link" onclick="location.href='/Nlogin/Nlogin.html'">Log In here !</a> 
+          </p>
+        </div>
+      </div>
+      <form class="signup-form" id="signup-form">
+
+        <div class="signup-name-wrapper">
+          <label for="signup-name"> Name </label>
+          <input type="text" id="signup-name" placeholder="Enter your Name" required>
+        </div>
+
+        <div class="signup-email-wrapper">
+          <label for="signup-email"> Email </label>
+          <div class="signup-with">
+            <input type="email" id="signup-email" placeholder="Enter your Email" required>
+            <button type="button" class="signup-email-send-btn">Send Code</button>
+          </div>
+        </div>
+
+        <div class="signup-email-code-wrapper">
+          <label for="signup-email-code"> Email-Code </label>
+          <div class="signup-with">
+            <input type="text" id="signup-email-code" placeholder="Enter your Email-Code" required>
+            <button type="button" class="signup-email-verify-btn">Verify Code</button>
+          </div>
+        </div>
+    
+        <div class="signup-password-wrapper">
+          <label for="signup-password"> Password </label> 
+          <input type="password" id="signup-password" placeholder="Enter your Password" required>
+        </div>
+
+        <div class="signup-password-confirm-wrapper">
+          <label for="signup-password-confirm"> Password Confirm</label> 
+          <input type="password" id="signup-password-confirm" placeholder="Enter your Password" required>
+        </div>
+
+        <button type="submit" class="signup-btn">Signup</button>
+      </form>
+
+      <div class="signup-sns">
+        <p>or continue with</p>
+        <div class="signup-sns-btn">
+          <button class="signup-facebook"> <img class="signup-img" src="/img/Facebook.png" alt="Facebook"> </button>
+          <button class="signup-google"> <img class="signup-img" src="/img/Google.png" alt="Google"> </button>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="/Nsignup/Nsugnup.js"></script>
+</body>
+</html>

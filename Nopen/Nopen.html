@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InviGo Open</title>
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/Nopen/Nopen.css">
+</head>
+
+<body>
+  <header class="open-header">
+    <h1>InviGo 초대장</h1>
+    <div class="open-info">
+      <a id="open-invigo" href="/Nindex/Nindex.html">
+        InviGO
+      </a>
+    </div>
+  </header>
+  
+  <button id="GoogleCalendarBtn" >구글 캘린더에 일정 추가</button>
+
+  <div class="blurOverlay hidden" id="blurOverlay"></div>
+
+  <div class="open-card">
+
+    <div class="main-container" id="main">
+      <div class="preview-section">
+        <h3>Invitation Card</h3>
+        <img class="preview-image" id="preview-image" alt="preview image">
+      </div>
+    </div>
+
+    <div class="sub-container" id="sub">
+        
+      <!-- hidden -->
+      <div class="rsvp-section ">
+        <h3>참석 여부 확인</h3>
+        <label for="rsvpName">이름</label>
+          <input type="text" id="rsvpName" placeholder="Name" />
+        <label for="rsvpEmail">이메일</label>
+          <input type="email" id="rsvpEmail" placeholder="Email" />
+        <div class="rsvp-reminder">
+          <label>
+            <input type="checkbox" id="rsvpReminder" />
+            리마인더 이메일 받기
+          </label>
+        </div>
+        <div class="rsvp-buttons">
+          <button type="button" class="rsvp-choice" data-choice="yes">✔️ 참석</button>
+          <button type="button" class="rsvp-choice" data-choice="no">❌ 불참</button>
+        </div>
+      </div>
+
+      <div class="survey-section ">
+        <h3>설문 응답</h3>
+        <div id="surveys"></div>
+      </div>
+
+      <div class="final-submit-buttons">
+        <button id="finalSubmitBtn" class="finalSubmit-btn">save</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="open-commentCard">
+    <div class="open-commentCard-header">
+      <p>초대자에게 익명으로 메시지를 남겨보세요 ...</p>
+    </div>
+    <div class="open-commentCard-body">
+      <textarea id="open-comment" placeholder="초대자에게 메세지를 남겨보세요 (50자 이내)" maxlength="50"></textarea>
+      <button id="open-comment-btn" class="open-comment-btn">Send</button>
+    </div>
+  </div>
+
+  <script src="/Nopen/Nopen.js"></script>
+</body>
+
+</html>

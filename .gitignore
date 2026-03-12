@@ -1,0 +1,17 @@
+# node_modules 폴더
+node_modules/
+
+# Firebase 비공개 키 
+server/firebase-key.json
+
+# 환경 변수 파일 
+.env
+
+# 로그 파일들
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 운영체제 자동 생성 파일
+.DS_Store
+Thumbs.db

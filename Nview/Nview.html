@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InviGo View</title>
+  
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="Nview.css">
+</head>
+
+<body>
+
+  <header class="view-header">
+    <h1>초대장 공유 설정</h1>
+    <div class="view-info">
+      <a id="mypageLink" href="">
+        <img id="icon-member" src="/img/view-icon-member.png">
+        <span id="username" class="username" style="display: none;">사용자 이름</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="dashboard">
+    <button class="dashboard-btn">초대장 통계 리포트</button>
+  </div>
+  
+  <div class="view-card">
+
+    <div class="main-container" id="main">
+      <div class="preview-section">
+        <h3>Invitation Card</h3>
+        <img class="preview-image" id="preview-image" alt="preview image">
+      </div>
+    </div>
+
+    <div class="sub-container" id="sub">
+      
+      <!-- hidden -->
+      <div class="rsvp-section ">
+        <h3>참석 여부 확인</h3>
+        <label for="rsvpName">이름</label><input type="text" id="rsvpName" placeholder="Name" disabled />
+        <label for="rsvpEmail">이메일</label><input type="email" id="rsvpEmail" placeholder="Email" disabled  />
+        <div class="rsvp-reminder">
+          <label>
+            <input type="checkbox" id="rsvpReminder" />
+            리마인더 이메일 받기
+          </label>
+        </div>
+        <div class="rsvp-buttons">
+          <button type="button" class="rsvp-choice" data-choice="yes">✔️ 참석</button>
+          <button type="button" class="rsvp-choice" data-choice="no">❌ 불참</button>
+        </div>
+      </div>
+
+      <div class="survey-section ">
+        <h3>설문 응답</h3>
+        <div id="surveys"></div>
+      </div>
+
+      <div class="final-submit-buttons">
+        <button id="finalSubmitBtn" class="finalSubmit-btn">save</button>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="message-card">
+    <div class="message-card-header">
+      <p>상대에게 메시지를 남겨보세요 ...</p>
+    </div>
+    <div class="message-card-body">
+      <input type="text" id="shareName" placeholder="받는 사람 이름"/>
+      <textarea id="shareComment" placeholder="초대와 함께 메세지를를 전해보세요"></textarea>
+      <button id="shareMessageBtn" class="shareMessageBtn">send</button>
+    </div>
+  </div>
+
+  <div class="share-methods"> 
+    <h4>공유</h4>
+
+    <div class="share-btns-wrapper">
+
+    <div class="share-link">
+      <button id="linkBtn">링크 공유</button>
+      <div id="linkPopup" class="linkPopup hidden">
+        <div class="popup-content">
+          <span class="popup-close" id="linkPopupClose">&times;</span>
+          <h3>초대장 링크</h3>
+          <input type="text" id="link-link" readonly />
+          <button id="linkCopyBtn">📋 링크 복사</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="share-qr">
+      <button id="qrBtn"> QR 공유</button>
+      <div id="qrPopup" class="qrPopup hidden">
+        <div class="popup-content">
+          <span class="popup-close" id="qrPopupClose">&times;</span>
+          <h3>초대장 QR </h3>
+          <div id="qrImage" class="qr-area"></div>
+          <input type="text" id="qr-link" readonly />
+          <button id="qrCopyBtn">📋 QR 복사</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="share-kako">
+      <button id="kakoBtn" data-method="kakao"> 카카오톡</button>
+      <div id="kakaoPopup" class="kakaoPopup hidden">
+        <div class="popup-content">
+          <span class="popup-close" id="kakaoPopupClose">&times;</span>
+        
+          <div id="kakaoOGSection" class="popup-section active" >
+            <h3>카카오톡 공유 설정</h3>
+            <p>썸네일, 제목, 설명 URL을 설정할 수 있습니다.</p>
+            <div class="kakaoOG-preview">
+              <div class="kakaoOG-image" id="kakaoOGImage" title="이미지 클릭하여 변경">
+                이미지 미리보기<br>권장 비율 1.91:1<br>최적크기 1200x630px<br>200x200px 이상
+              </div>
+              <input type="file" accept="image/*" id="kakaoOGImageInput" style="display: none" />
+              <div class="kakaoOG-title" id="kakaoOGTitle" contenteditable="true">제목을 입력하세요</div>
+              <div class="kakaoOG-desc" id="kakaoOGDesc" contenteditable="true">설명을 입력하세요</div>
+              <div class="kakaoOG-url" id="kakaoOGUrl" contenteditable="true">https://yourdomain.com/open.html?id=abc123</div>
+            </div>
+            <button id="kakaoSaveBtn">저장하기</button>
+            <button id="kakaoSkipBtn">건너뛰기</button>
+          </div>
+          
+          <div id="kakaoShareSection" class="popup-section hidden">
+            <span class="popup-close" id="KakaoSharePopupClose">&times;</span> 
+            <h3>공유하기</h3>
+            <p>Kakao 초대장을 공유해보세요!</p>
+            <input type="text" id="kakao-link" readonly />
+            <button id="kakaoCopyBtn">📋 링크 복사</button>
+            <button id="kakaoShareNowBtn">💬 카카오톡 공유</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="share-facebook">
+      <button id="facebookBtn" data-method="facebook">페이스북</button>
+      <div id="facebookPopup" class="facebookPopup hidden">
+        <div class="popup-content">
+          <span class="popup-close" id="facebookPopupClose">&times;</span>
+
+          <div id="facebookOGSection" class="popup-section active">
+            <h3>페이스북 공유 설정</h3>
+            <p>썸네일, 제목, 설명, URL을 설정할 수 있습니다.</p>
+            <div class="facebookOG-preview">
+              <div class="facebookOG-image" id="facebookOGImage" title="이미지 클릭하여 변경">
+                이미지 미리보기<br>권장 비율 1.91:1<br>최적크기 1200x630px<br>200x200px 이상
+              </div>
+              <input type="file" accept="image/*" id="facebookOGImageInput" style="display: none" />    
+              <div class="facebookOG-url" id="facebookOGUrl" contenteditable="true">https://yourdomain.com/open.html?id=abc123</div>
+              <div class="facebookOG-title" id="facebookOGTitle" contenteditable="true">제목을 입력하세요</div>
+              <div class="facebookOG-desc" id="facebookOGDesc" contenteditable="true">설명을 입력하세요</div>
+            </div> 
+            <button id="facebookSaveBtn">저장하기</button>
+            <button id="facebookSkipBtn">건너뛰기</button>
+          </div>
+      
+          <div id="facebookShareSection" class="popup-section hidden">
+            <span class="popup-close" id="facebookSharePopupClose">&times;</span>
+            <h3>공유하기</h3>
+            <p>Facebook 초대장을 공유해보세요!</p>
+            <input type="text" id="facebook-link" readonly />
+            <button id="facebookCopyBtn">📋 링크 복사</button>
+            <button id="facebookShareNowBtn">💬 페이스북 공유</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+<script src="/Nview/Nview.js"></script>
+</body>
+</html>

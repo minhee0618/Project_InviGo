@@ -1,0 +1,237 @@
+body {
+  width: 100%;
+  max-width: 120rem;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  color: #000000;
+}
+/**********open-header**********/
+.open-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  margin: 3rem;
+  background-color:#444;
+  color: white;
+}
+.open-header h1 {
+  font-size: 1.8rem;
+}
+#open-invigo {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #f5f5f5;
+  cursor: pointer;
+}
+/**********GoogleCalendarBtn**********/
+#GoogleCalendarBtn {
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 0rem 3rem 1rem;
+  padding: 1.8rem 3rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#GoogleCalendarBtn:hover{
+  background-color:	#C8C6D7;
+}
+
+/**********open-card**********/
+.open-card{
+  padding: 2rem;
+  margin: 1rem 3rem;
+  border: 2px solid #B3AFC3;
+  border-radius: 12px;
+}
+.main-container,.sub-container {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px rgba(179,175,195,0.4);
+}
+.main-container h3, .sub-container h3{
+  color: #555;
+  font-size: 2rem;
+  font-weight: 800;
+}
+/**main-container*/
+.preview-section {
+  padding-bottom: 3rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  z-index: 0; 
+}
+.preview-image {
+  width: 65rem;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+/**sub-container*/
+.hidden {
+  display: none !important;
+}
+.rsvp-section, .survey-section {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.rsvp-section label{
+  display: block;
+  color: #555;
+  font-size: 1.5rem;
+  padding: 3rem 0 1rem 0;
+}
+.rsvp-section input[type="text"],
+.rsvp-section input[type="email"] {
+  width: 50%;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+.rsvp-reminder {
+  margin: 2rem;
+}
+.rsvp-reminder label {
+  padding: 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+#rsvpReminder{
+  margin: 1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.rsvp-buttons {
+  margin: 3rem auto;
+}
+.rsvp-choice {
+  margin: 3rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid  #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.rsvp-choice:hover, .rsvp-choice.selected{
+  background-color:  #B3AFC3;
+}
+.rsvp-section.show, .survey-section.show {
+  display: block;
+}
+#surveys{
+  margin: 3rem;
+}
+.survey-item { 
+  margin: 2rem auto 4rem; 
+}
+.survey-q {
+  display: block;
+  font-size: 1.5rem;
+  margin: 2rem;
+  font-weight: 800;
+  color: #555;
+}
+input[type="radio"] {
+  display: none; 
+  pointer-events: auto;
+}
+.survey-o label{
+  display: block;
+  width: 55%;
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.survey-o label:hover,#surveys .survey-o label.selected {
+  background-color:  #B3AFC3;
+}
+
+#finalSubmitBtn{
+  padding: 1.5rem 2.8rem;
+  margin: 2rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #f9f9f9;
+  border: 1px solid #B3AFC3;
+  background-color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#finalSubmitBtn:hover {
+  color: white;
+  background-color: #222;
+}
+/**********view-commentCard**********/
+.open-commentCard{
+  padding: 3rem 6rem;
+  margin: 4rem 3rem 10rem;
+  border: 2px solid #B3AFC3;
+  background-color: #B3AFC3;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.open-commentCard-header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+.open-commentCard-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.open-commentCard:hover .open-commentCard-body,
+.open-commentCard:focus-within 
+.open-commentCard-body {
+  max-height: 23rem;
+  padding-bottom: 1.5rem;
+}
+.open-commentCard textarea {
+  width: 99%;
+  margin-top: 1.5rem;
+  padding: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+.open-commentCard textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+.open-comment-btn{
+  float: right;
+  padding: 1.1rem 2.8rem;
+  margin: 2rem 2rem 0 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #f9f9f9;
+  border: 1px solid #B3AFC3;
+  background-color: #777;
+  cursor: pointer;
+}

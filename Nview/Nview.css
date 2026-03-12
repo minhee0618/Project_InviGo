@@ -1,0 +1,338 @@
+body {
+  width: 100%;
+  max-width: 120rem;
+  margin: 3rem auto;
+  background-color: #ffffff;
+  color: #000000;
+}
+/**********view-header**********/
+.view-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  margin: 3rem;
+  background-color:#444;
+  color: white;
+}
+.view-header h1 {
+  font-size: 1.8rem;
+}
+#icon-member {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  filter: brightness(0) invert(1); 
+}
+
+/**********dashboard**********/
+.dashboard {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem;
+}
+.dashboard-btn {
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.8rem 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.dashboard-btn:hover {
+  background-color:	#C8C6D7;
+}
+
+/**********view-card**********/
+.view-card{
+  padding: 2rem;
+  margin: 1rem 3rem;
+  border: 2px solid #B3AFC3;
+  border-radius: 12px;
+}
+.main-container,.sub-container {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px rgba(179,175,195,0.4);
+}
+.main-container h3, .sub-container h3{
+  color: #555;
+  font-size: 2rem;
+  font-weight: 800;
+}
+/**main-container*/
+.preview-section {
+  padding-bottom: 3rem;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  z-index: 0; 
+}
+.preview-image {
+  width: 65rem;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+/**sub-container*/
+.hidden {
+  display: none !important;
+}
+.rsvp-section, .survey-section {
+  margin: 1rem auto;
+  padding: 1rem;
+}
+
+.rsvp-section label{
+  display: block;
+  color: #555;
+  font-size: 1.5rem;
+  padding: 3rem 0 1rem 0;
+}
+.rsvp-section input[type="text"],
+.rsvp-section input[type="email"] {
+  width: 50%;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+}
+.rsvp-reminder {
+  margin: 2rem;
+}
+.rsvp-reminder label {
+  padding: 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+#rsvpReminder{
+  pointer-events: none;
+  margin: 1rem;
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.rsvp-buttons {
+  margin: 3rem auto;
+}
+.rsvp-choice {
+  margin: 3rem;
+  padding: 1.2rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: 1px solid  #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.rsvp-choice:hover, .survey-option:hover {
+  background-color:  #B3AFC3;
+}
+.rsvp-section.show, .survey-section.show {
+  display: block;
+}
+#surveys{
+  margin: 3rem;
+}
+.survey-item { 
+  margin: 2rem auto 4rem; 
+}
+.survey-q {
+  display: block;
+  font-size: 1.5rem;
+  margin: 2rem;
+  font-weight: 800;
+  color: #555;
+}
+input[type="radio"] {
+  display: none; 
+}
+.survey-o label{
+  display: block;
+  width: 60%;
+  margin: 1.5rem auto;
+  padding: 1.5rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.survey-o label:hover {
+  outline: 2px solid #888; 
+}
+
+#finalSubmitBtn{
+  padding: 1.5rem 2.8rem;
+  margin: 2rem;
+  margin-bottom: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #f9f9f9;
+  border: 1px solid #B3AFC3;
+  background-color: #777;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#finalSubmitBtn:hover {
+  color: white;
+  background-color: #222;
+}
+
+/**********message-card**********/
+.message-card {
+  padding: 3rem 6rem;
+  margin: 4rem 3rem;
+  border: 2px solid #B3AFC3;
+  background-color: #B3AFC3;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.message-card-header {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+.message-card-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+.message-card:hover .message-card-body,
+.message-card:focus-within 
+.message-card-body {
+  max-height: 23rem;
+  padding-bottom: 1.5rem;
+}
+.message-card input,
+.message-card textarea {
+  width: 99%;
+  margin-top: 1.5rem;
+  padding: 1.7rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border: 1px solid #B3AFC3;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #fafafa;
+  transition: border-color 0.3s ease;
+}
+.message-card input:focus,
+.message-card textarea:focus {
+  outline: none;
+  border-color: #666;
+}
+.shareMessageBtn{
+  float: right;
+  padding: 1.1rem 2.8rem;
+  margin: 2rem 2rem 0 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 8px;
+  color: #f9f9f9;
+  border: 1px solid #B3AFC3;
+  background-color: #777;
+  cursor: pointer;
+}
+/**********share-methods**********/
+.share-methods {
+  text-align: center;
+  margin-bottom: 10rem;
+  padding: 3rem;
+}
+.share-methods h4 {
+  color: #555;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.share-btns-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+  gap: 6rem;
+}
+#linkBtn, #qrBtn, #kakoBtn, #facebookBtn {
+  width: 15rem;
+  margin: auto;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  border: 2px solid rgb(180, 177, 196);
+  background-color: #999;
+  transition: background-color 0.3s ease;
+}
+#linkBtn :hover, #qrBtn :hover, #kakoBtn :hover,#facebookBtn:hover {
+  background-color: #B3AFC3;
+}
+#linkPopup, #qrPopup, #kakaoPopup, #facebookPopup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+  background-color: rgba(180, 177, 196, 0.3);
+  z-index: 999;
+}
+.linkPopup .popup-content, .qrPopup .popup-content,.kakaoPopup .popup-content, .facebookPopup .popup-content  {
+  background-color: #fff;
+  padding: 4rem;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+}
+#linkPopupClose, #qrPopupClose,#kakaoPopupClose, #facebookPopupClose,
+#KakaoSharePopupClose, #facebookSharePopupClose{
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.popup-content h3{
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+#link-link, #qr-link, #kakao-link, #facebook-link {
+  width: 90%;
+  padding: 1.3rem;
+  font-size: 0.95rem;
+  border: 1px solid #B3AFC3;
+  border-radius: 6px;
+}
+#linkCopyBtn, #qrCopyBtn, #kakaoCopyBtn, #facebookCopyBtn {
+  margin: 4rem auto 1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.3rem;
+  background-color: #555;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+/**********link**********/
+
+/**********qr**********/
+#qrImage{
+  padding: 2rem;
+}
+/**********kakao**********/
+
+/**********facebook**********/

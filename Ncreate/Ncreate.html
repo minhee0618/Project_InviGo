@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InviGo Create</title>
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/Ncreate/Ncreate.css"> 
+  <link rel="stylesheet" href="/Ncreate/Ncreate_panel.css">
+    <!--google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Diphylleia&family=Dongle&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Diphylleia&family=Dongle&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Diphylleia&family=Dongle&family=Hi+Melody&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Diphylleia&family=Dokdo&family=Dongle&family=Hi+Melody&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+And+White+Picture&family=Black+Han+Sans&family=Diphylleia&family=Dokdo&family=Dongle&family=Hi+Melody&family=Jua&family=M+PLUS+2:wght@100..900&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Black+And+White+Picture&family=Black+Han+Sans&family=Diphylleia&family=Dokdo&family=Dongle&family=Hi+Melody&family=Jua&family=M+PLUS+2:wght@100..900&family=Moirai+One&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+
+  <!--html2canvas-->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <!-- Kakao Maps JavaScript SDK -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=786e4c90f2a895a5538f74abaf0ca6d3&libraries=services"></script>
+  <!-- Daum Postcode -->
+  <script sr c="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="header-logo-icon">
+      <a href="/Nindex/Nindex.html">
+        <img src="/img/logo-icon.png" alt="icon">
+      </a>
+    </div>
+    <div class="header-comment">
+      <h1>Let's Go InviGo</h1>
+      <h2>지금, 나만의 감성 초대장을 InviGo에서 시작해보세요</h2>
+    </div>
+    <div class="header-user-info">
+      <a href="/Nmy/Nmy.html">
+        <img id="icon-member" src="/img/create-icon-member.png">
+      </a>
+    </div>
+  </header>
+  
+
+  <div class="create-main">
+
+    <div class="main-tools">
+      <div class="icon-btns">
+        <button class="style-toggle"> <img src="/img/create-icon-style.png" alt="style"></button>
+        <button class="response-toggle"> <img src="/img/create-icon-response.png" alt="response"> </button>
+      </div>  
+
+      <div id="style-panel" class="side-panel">
+
+        <div class="style-header">Style  Lab</div>  
+        
+        <div class="main-tool-box"> 
+          <div class="info-box">
+            <fieldset>
+              <legend>Information <button type="button" class="info-toggle-btn">▼</button></legend>
+              <label>초대장<input type="text" id="name"></label>
+              <label>날짜<input type="date" id="date"></label>
+              <label>시간<input type="time" id="time"></label>
+              <label>정보<textarea id="information" rows="3"></textarea></label>
+              <label>추가<br>정보<textarea id="addinformation" rows="3"></textarea></label>
+              <label>번호<input type="tel" id="telephone"></label>
+              <label>이메일<input type="email" id="email"></label>
+            </fieldset>
+          </div>
+          <div class="text-box">
+            <fieldset class="closed">
+              <legend>Add Text <button type="button" class="text-toggle-btn">▼</button></legend>
+              <button type="button" class="add-text-btn">+ Add text</button>
+              <div class="custom-text">
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="sub-tool-box">
+          <div id="default-tool-box">
+          
+            <div class="ratio">
+              <div class="ratio-title">ratio</div>
+              <div class="ratio-container">
+                <div class="ratio-box" data-ratio="4/3">4 : 3</div>
+                <div class="ratio-box" data-ratio="1/1">1 : 1</div>
+                <div class="ratio-box" data-ratio="3/4">3 : 4</div>
+                <div class="ratio-box" data-ratio="16/9">16 : 9</div>
+              </div>
+            </div>
+            <div class="elements">
+              <div class="elements-title">tools</div>
+              <div class="elements-container">
+                <button class="element-btn" data-element="text">Text</button>
+                <button class="element-btn" data-element="background">Background</button>
+                <button class="element-btn" data-element="template">Template</button>
+                <button class="element-btn" data-element="image">Image</button>
+                <button class="element-btn" data-element="music">Music</button>
+                <button class="element-btn" data-element="map">Map</button>
+              </div>
+            </div>
+            <button id="download-btn"> PNG Download</button>
+          </div>
+
+          <div id="edit-tool-box" style="display: none;">
+            <div class="element-toolbar">
+              <button id="element-back-btn"> &#10095; </button>
+              <div class="elements">
+                <button class="element-btn" id="active-element-btn" disabled></button>
+              </div>
+            </div> 
+            <div class="elements-setting">
+              <!-- 동적 UI-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="response-panel" class="side-panel">
+        <div class="response-header">Response  Lab</div>
+        <div class="response-content">  
+
+          <div class="rsvp-checkbox-box">
+            <label class="rsvp-checkbox-label">초대 응답 설정
+              <label class="rsvp-checkbox"><input type="checkbox" id="rsvp-check" /></label>
+            </label>
+          </div>
+
+          <div class="add-survey" style="display: none;">
+            <button class="add-survey-btn"> + Add Survey</button>
+          </div>
+          
+          <div class="surveys">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="main-preview">
+
+      <div class="preview-box">
+        <div class="preview-card">
+          <p id="preview-name"> </p>
+          <p id="preview-date"> </p>
+          <p id="preview-time"> </p>
+          <p id="preview-information"> </p>
+          <p id="preview-addinformation"> </p>
+          <p id="preview-telephone"> </p>
+          <p id="preview-email"> </p>   
+          <div class="preview-custom-texts"></div>
+          <div class="preview-image"><img id="image-file" style="display: none;"/></div>
+          <div class="preview-music"><audio id="audio-file" preload="metadata"></audio></div>
+        </div>
+      </div>
+
+      <!-- <div class="preview-add-page">
+        <button id="add-page-btn" class="add-page-btn">+ Add Page</button>
+      </div> -->
+      
+      <div class="preview-share">
+        <button id="share-btn" class="share-btn">Share</button>
+      </div>
+    
+    </div>
+
+  </div>
+
+  <div id="ai-modal" class="ai-modal hidden">
+  
+    <div class="ai-modal-backdrop"></div>
+
+    <div class="ai-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="ai-title">
+      <button type="button" id="ai-close" class="ai-modal-close" aria-label="Close">✕</button>
+      <h3 id="ai-title">Generate AI Image</h3>
+
+      <label class="ai-label" for="ai-prompt">Prompt</label>
+      <textarea id="ai-prompt" rows="3" placeholder="어떤 이미지를 생성할까요? 키워드를 입력하세요"></textarea>
+
+      <div class="ai-preview">
+        <img id="ai-preview" alt="AI preview" hidden />
+      </div>
+
+      <div class="ai-actions">
+        <button type="button" id="ai-generate">Generate</button>
+        <button type="button" id="ai-apply" disabled>Apply</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <script type="module" src="Ncreate.js"></script>
+</body>
+
+</html>

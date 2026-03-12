@@ -1,0 +1,25 @@
+{
+  "name": "nproject_new",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "/server/invigo.js",
+  "scripts": {
+    "start": "node server/invigo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "MinheeKim",
+  "license": "ISC",
+  "description": "Let's Go InviGO",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "firebase-admin": "^13.5.0",
+    "install": "^0.13.0",
+    "nodemailer": "^7.0.10",
+    "npm": "^11.6.2",
+    "openai": "^6.8.1"
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="Npwreset.css">
+</head>
+
+<body>
+  <div class="pwreset-wrapper">
+    <div class="pwreset-container">
+
+      <div class="pwreset-header">
+        <h2 class="pwreset-title">Reset password</h2>
+        <div class="pwreset-sub-title">
+          <p>Enter your email you used to sign up</p>
+          <p>We’ll send you a link to reset your password !</p>
+        </div>
+      </div>
+
+      <form id="pwreset-form" class="pwreset-form">
+        <label for="pwreset-email">Email</label>
+        <input type="email" id="pwreset-email" placeholder="Enter your Email" required />
+        <button type="submit" class="pwreset-send-btn">Send Reset Link</button>
+      </form>
+
+      <button class="pwreset-close-btn" onclick="location.href='/Nlogin/Nlogin.html'">Back to Login</button>
+    </div>
+  </div>
+  <script src="/Nlogin/Npwreset.js"></script>
+</body>
+</html>

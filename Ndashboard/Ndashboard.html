@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InviGo Dashboard</title>
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/Ndashboard/Ndashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <header class="dashboard-header">
+    <div class="dashboard-inviteId">
+      <p id="invitationId"> 초대장 ID: <a id="openLink" href="#" target="_blank"></a></p>
+    </div>
+    
+    <div class="dashboard-info">
+      <a id="mypageLink" href="">
+        <img id="icon-member" src="/img/view-icon-member.png">
+        <span id="username" class="username" style="display: none;">사용자 이름</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="dashboard-rsvp">
+    <h1>초대 응답 현황</h1>
+    <div class="summary" id="summary">로딩 중...</div>
+    <canvas id="rsvpChart"></canvas>
+  </div>
+
+  <div class="dashboard-list">
+    <h3>📋 응답자 목록</h3>
+    
+    <table>
+      <thead id="rsvp-head">
+        <tr>
+          <th>이름</th>
+          <th class="filter-th">참석 
+            <button class="filter-icon" id="attendFilterToggle">⏷</button>
+            <ul class="filter-options hidden" id="attendFilterOptions">
+              <li data-value="all">전체</li>
+              <li data-value="yes">참석</li>
+              <li data-value="no">불참</li>
+            </ul>
+          </th>
+          <th class="filter-th">리마인더 이메일 
+            <button class="filter-icon" id="reminderFilterToggle">⏷</button>
+            <ul class="filter-options hidden" id="reminderFilterOptions">
+              <li data-value="all">전체</li>
+              <li data-value="yes">동의</li>
+              <li data-value="no">비동의</li>
+            </ul>
+          </th>
+          <th>이메일</th>
+          <th>응답시간</th>
+        </tr>
+      </thead>
+      <tbody id="rsvp-body">
+      </tbody>
+    </table>
+
+    <button id="ReminderSendBtn">리마인더 이메일 보내기</button>
+
+    <div id="emailPopup" class="modal hidden">
+      <div class="modal-content">
+        <button id="cancelEmailBtn" aria-label="닫기">×</button>
+        <h3 class="email-popup-title">리마인더 이메일 발송</h3>
+        <p id="emailPopupText" class="email-popup-desc"></p>
+        <div id="recipientList"></div>
+        <button id="sendEmailBtn">send</button>
+      </div>
+    </div>
+
+    <div id="emailResultPopup" class="modal hidden">
+      <div class="modal-content">
+        <button id="closeEmailResultBtn" aria-label="닫기">×</button>
+        <h3 class="email-result-title">전송 결과</h3>
+        <p id="emailResultText" class="email-result-desc"></p>
+        <ul id="emailResultList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dashboard-survey">
+    <h3>📊 설문 통계</h3>
+    <div id="surveyChart" class="surveyChart"></div>
+  </div>
+
+  <div class="dashboard-message">
+    <h3>💬 익명 메시지</h3>
+    <div id="messageList" class="messageList"></div>
+  </div>
+
+  <script src="/Ndashboard/Ndashboard.js"></script>
+</body>
+
+</html>
